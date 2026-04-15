@@ -69,8 +69,15 @@ export default function Locations() {
                     Desert International Horse Park
                   </h4>
                   <p className="text-sm text-slate-600 mt-1">
-                    Our permanent clinic location, open during the competition
-                    season. Full urgent care, diagnostics, and pharmacy services.
+                    Our permanent clinic, in the Vendor Area across from the
+                    Grand Equitation Arena. Full urgent care, diagnostics, and
+                    pharmacy services.
+                  </p>
+                  <p className="text-sm font-medium text-slate-800 mt-2">
+                    Wed&ndash;Sun, 9am&ndash;5pm during Winter Circuit
+                  </p>
+                  <p className="text-xs text-slate-500">
+                    Walk-ins welcome · Appointments via Solv
                   </p>
                 </div>
               </div>

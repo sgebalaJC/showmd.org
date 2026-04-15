@@ -42,26 +42,61 @@ export default function About() {
             <span className="text-sm font-semibold text-[hsl(40,76%,48%)] uppercase tracking-wider">
               Meet Dr. Blasko
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-3 mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mt-3 mb-3">
               A Doctor Who Speaks Equestrian
             </h2>
+            <p className="text-sm font-medium text-slate-500 mb-6">
+              Dr. Barbara Blasko — Founder &amp; CEO
+            </p>
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                The ShowMD Team is led by Dr. Barbara Blasko. Whether at a
-                venue close to home, or on the road, Dr. Blasko&apos;s priority
-                is to staff ShowMD clinics with the same medical professionals
-                you are used to seeing elsewhere.
+                Board-Certified Emergency Medicine Physician with 22 years of
+                experience across multiple Emergency Departments in the United
+                States. Specialties include Emergency Medicine, telemedicine,
+                Utilization Management, and biomedical informatics.
+              </p>
+              <p>
+                An amateur horsewoman and active show-jumping competitor on the
+                west-coast hunter/jumper circuits, Dr. Blasko combined her
+                passions to found ShowMD — staffing every clinic with medical
+                professionals who ride.
               </p>
               <p>
                 At ShowMD, we prioritize a comfortable experience for our
-                patients, continuity of care, and medical staff who are
-                specifically trained to understand the needs, wants, and
-                language of equestrian athletes.
+                patients, continuity of care, and medical staff specifically
+                trained to understand the needs, wants, and language of
+                equestrian athletes.
               </p>
               <p className="font-medium text-slate-800">
                 When you tell a ShowMD staff member &ldquo;my horse did a two
                 in the one,&rdquo; they will know exactly what you mean.
               </p>
+              <dl className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200">
+                <div>
+                  <dt className="text-xs uppercase tracking-wider text-slate-500">
+                    Certification
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold text-slate-800">
+                    Board-Certified ER
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-xs uppercase tracking-wider text-slate-500">
+                    Experience
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold text-slate-800">
+                    22+ years
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-xs uppercase tracking-wider text-slate-500">
+                    Discipline
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold text-slate-800">
+                    Hunter / Jumper
+                  </dd>
+                </div>
+              </dl>
             </div>
           </div>
         </div>

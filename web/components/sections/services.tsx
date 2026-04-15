@@ -91,7 +91,7 @@ const services = [
     ),
     title: "RX & Pharmacy",
     description:
-      "On-site pharmacy services so you can get the medications you need without leaving the show grounds.",
+      "On-site dispensing of antibiotics, pain relief, muscle relaxers, and OTC medications — plus electronic Rx transmission and pain-management injections without leaving the show grounds.",
   },
   {
     icon: (
@@ -115,7 +115,7 @@ const services = [
     ),
     title: "Concierge Care",
     description:
-      "High-end, personalized medical care with less waiting. Your own private physician at the show.",
+      "No 15-minute slots. A customized health-care relationship with Dr. Blasko — time to listen, and lifestyle, treatment and therapy tailored to you as a rider and athlete.",
   },
   {
     icon: (
@@ -139,6 +139,29 @@ const services = [
     title: "Telemedicine",
     description:
       "Connect with our team remotely for follow-ups, consultations, and ongoing care — wherever you are.",
+  },
+  {
+    icon: (
+      <svg
+        aria-hidden="true"
+        className="h-6 w-6"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M4.5 12.5 12 20l7.5-7.5a5 5 0 0 0-7-7l-.5.5-.5-.5a5 5 0 0 0-7 7Z" />
+        <path d="m8 9 6 6" />
+      </svg>
+    ),
+    title: "Peptide Injections",
+    description:
+      "Enhance muscle recovery, increase strength and stamina, improve joint health, and speed healing with targeted peptide therapy.",
   },
 ];
 
