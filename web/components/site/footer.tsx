@@ -1,34 +1,33 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Container } from "@/components/ui/container";
 
-export function Footer() {
+export default function Footer() {
   return (
-    <footer className="border-t border-ink-100 bg-cream-50">
-      <Container className="py-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-        <div className="flex items-center gap-2.5 text-sm text-ink-700">
-          <span
-            aria-hidden="true"
-            className="inline-flex h-6 w-6 items-center justify-center rounded bg-ink-900 text-cream-50 text-[11px] font-bold tracking-tight"
-          >
-            A
-          </span>
-          <span>
-            <strong className="text-ink-900">ShowMD</strong> — HIPAA-compliant. Patient-first.
-          </span>
+    <footer className="bg-[hsl(0,45%,14%)] py-12 border-t border-[hsl(0,30%,20%)]">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col items-center gap-6 text-center">
+          <Image
+            src="/images/showmd-logo.png"
+            alt="ShowMD"
+            width={160}
+            height={46}
+            className="h-10 w-auto object-contain brightness-0 invert"
+          />
+          <p className="text-white/50 text-sm font-medium">
+            Horse Show Health Care — Onsite Urgent Care &amp; Concierge Medical
+          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 text-white/40 text-sm">
+            <span>© 2026 Blasko Medical Consultants Inc. All rights reserved.</span>
+            <span className="hidden sm:inline">·</span>
+            <Link
+              className="text-white/50 hover:text-white/80 transition-colors"
+              href="/privacy"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
-        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-ink-600">
-          <Link href="/#features" className="hover:text-ink-900">Features</Link>
-          <Link href="/#security" className="hover:text-ink-900">Security</Link>
-          <a href="mailto:hello@showmd.org" className="hover:text-ink-900">
-            Contact
-          </a>
-          <Link href="/privacy" className="hover:text-ink-900">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-ink-900">Terms of Service</Link>
-        </nav>
-        <p className="text-xs text-ink-500">
-          © {new Date().getFullYear()} ShowMD
-        </p>
-      </Container>
+      </div>
     </footer>
   );
 }

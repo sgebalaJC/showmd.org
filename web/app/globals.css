@@ -2,46 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light;
-}
+@layer base {
+  :root {
+    color-scheme: light;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --card-border: 214 32% 91%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --popover-border: 214 32% 91%;
+    --primary: 0 65% 32%;
+    --primary-foreground: 0 0% 100%;
+    --primary-border: 0 65% 24%;
+    --secondary: 0 30% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --secondary-border: 0 30% 88%;
+    --muted: 220 15% 95%;
+    --muted-foreground: 215 16% 47%;
+    --muted-border: 220 15% 87%;
+    --accent: 40 76% 48%;
+    --accent-foreground: 222 47% 11%;
+    --accent-border: 40 76% 40%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --destructive-border: 0 84.2% 52%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 0 65% 32%;
+    --radius: 0.5rem;
+  }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
 
-body {
-  font-feature-settings: "ss01", "cv11";
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-button:not(:disabled),
-[role="button"]:not(:disabled) {
-  cursor: pointer;
-}
-
-.anchor {
-  scroll-margin-top: 96px;
-}
-
-.bg-radiance {
-  background:
-    radial-gradient(60rem 30rem at 85% -10%, rgba(228, 183, 95, 0.22), transparent 60%),
-    radial-gradient(50rem 28rem at 5% 10%, rgba(212, 165, 76, 0.12), transparent 60%),
-    linear-gradient(180deg, #fdfcf7 0%, #f7f4ec 100%);
-}
-
-.bg-gridlines {
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(28, 26, 21, 0.08) 1px, transparent 0);
-  background-size: 24px 24px;
-}
-
-.glass {
-  background-color: rgba(253, 252, 247, 0.78);
-  backdrop-filter: saturate(150%) blur(12px);
-  -webkit-backdrop-filter: saturate(150%) blur(12px);
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
