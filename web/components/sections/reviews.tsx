@@ -24,64 +24,62 @@ const FiveStars = () => (
   </div>
 );
 
+// Reviews reproduced verbatim from showmd.org/reviews-1.
+// The source page shows the quotes without names/roles — attributions below
+// are generic placeholders so the card footer has something to render.
 const reviews = [
   {
     quote:
-      '"Unfortunate spill on day one of week one left me with a broken scapula but we didn\'t miss a beat thanks to our incredible team and friends. First, thank you @showmd, and Dr Barb for being amazing. Within 20 minutes I had x-rays, a diagnosis, a pain shot, a prescription called in, a sling and I was on my way. All without leaving the horse show!"',
-    name: "Hope Glynn",
-    role: "Equestrian Athlete",
+      "\u201CI fell off the other day and was a little bit sore but a few days later, my back had really locked up. They got me right in and Dr. Barb gave me meds and got me moving again. The whole visit only took about 25 minutes and she scheduled an MRI for my back for the very next day. Highly recommend visiting show MD next time you need a doctor.\u201D",
+    name: "ShowMD Patient",
+    role: "Desert International Horse Park",
     wide: true,
   },
   {
     quote:
-      '"I fell off the other day and was a little bit sore but a few days later, my back had really locked up. They got me right in and Dr. Barb gave me meds and got me moving again. The whole visit only took about 25 minutes and she scheduled an MRI for my back for the very next day. Highly recommend visiting ShowMD next time you need a doctor."',
-    name: "DIHP Rider",
-    role: "Desert International Horse Park",
-    wide: false,
-  },
-  {
-    quote:
-      '"Dog bite... staff was efficient, caring and very personable. Dr Barb was great with my many stitches!"',
+      "\u201CDog bite\u2026staff was efficient, caring and very personable. Dr Barb was great with my many stitches!\u201D",
     name: "ShowMD Patient",
     role: "Desert International Horse Park",
     wide: false,
   },
   {
     quote:
-      '"So kind and helpful! Helped me with my lower back strain and relieved my pain. Very glad I made this connection."',
+      "\u201CSo kind and helpful! Helped me with my lower back strain and relieved my pain. Very glad I made this connection.\u201D",
     name: "ShowMD Patient",
     role: "Equestrian Competitor",
     wide: false,
   },
   {
     quote:
-      '"I needed to be checked for a tooth abscess and got that done and prescribed antibiotics. Right here at the horse show where I have to work. Saved my life."',
+      "\u201CI needed to be check for a tooth apses and got that done and prescribed antibiotics. Right here at the horse show were I have to work. Save my life.\u201D",
     name: "ShowMD Patient",
     role: "Horse Show Professional",
     wide: false,
   },
   {
     quote:
-      '"So convenient to have ShowMD on grounds at DIHP. Great experience and care. Thank you Barb."',
-    name: "DIHP Visitor",
+      "\u201CSo convenient to have ShowMD on grounds at DIHP. Great experience and care. Thank you Barb.\u201D",
+    name: "ShowMD Patient",
     role: "Desert International Horse Park",
     wide: false,
   },
   {
     quote:
-      '"From walking into the clinic, checking in, to exam, the staff provided excellent and speedy service."',
+      "\u201CFrom walking into the clinic, checking in, to exam, the staff provided excellent and speedy service.\u201D",
     name: "ShowMD Patient",
     role: "Walk-In Patient",
     wide: false,
   },
   {
-    quote: '"Very helpful and kind. Easy check in and check out. No waiting."',
+    quote:
+      "\u201CVery helpful and kind Easy check in and check out No waiting\u201D",
     name: "ShowMD Patient",
     role: "Walk-In Patient",
     wide: false,
   },
   {
-    quote: '"What a brilliant service! Kind and professional staff. Easy in and out."',
+    quote:
+      "\u201CWhat a brilliant service! Kind and professional staff. Easy in and out.\u201D",
     name: "ShowMD Patient",
     role: "Equestrian Community",
     wide: false,
