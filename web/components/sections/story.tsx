@@ -40,12 +40,12 @@ export default function Story() {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-[hsl(40,76%,48%)] to-primary/20" />
-            {milestones.map((m) => (
+            {milestones.map((m, i) => (
               <div
                 key={m.title}
-                className={`relative flex items-center mb-12 last:mb-0 ${
-                  m.direction === "left" ? "md:flex-row-reverse" : "md:flex-row"
-                }`}
+                className={`relative flex items-center mb-6 md:mb-0 ${
+                  i > 0 ? "md:-mt-16" : ""
+                } ${m.direction === "left" ? "md:flex-row-reverse" : "md:flex-row"}`}
               >
                 <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white shadow z-10" />
                 <div
@@ -55,7 +55,7 @@ export default function Story() {
                       : "md:ml-auto md:pl-8"
                   }`}
                 >
-                  <div className="bg-white border border-slate-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="bg-white border border-slate-100 rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow">
                     <span className="text-xs font-bold text-[hsl(40,76%,48%)] uppercase tracking-wider">
                       {m.tag}
                     </span>
