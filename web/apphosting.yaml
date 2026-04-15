@@ -4,3 +4,21 @@ runConfig:
   cpu: 1
   memoryMiB: 512
   concurrency: 80
+
+env:
+  - variable: MAIL_FROM
+    value: ShowMD <notifications@showmd.org>
+    availability:
+      - RUNTIME
+  - variable: MAIL_TO
+    value: barb@showmd.org
+    availability:
+      - RUNTIME
+  - variable: MAIL_CC
+    value: kaitlyn@showmd.org
+    availability:
+      - RUNTIME
+  - variable: RESEND_API_KEY
+    secret: RESEND_API_KEY
+    availability:
+      - RUNTIME

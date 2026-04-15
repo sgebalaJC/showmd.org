@@ -1,6 +1,7 @@
 import Nav from "@/components/site/nav";
 import Footer from "@/components/site/footer";
 import Hero from "@/components/sections/hero";
+import Video from "@/components/sections/video";
 import Services from "@/components/sections/services";
 import About from "@/components/sections/about";
 import Story from "@/components/sections/story";
@@ -16,6 +17,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <Video />
         <Services />
         <About />
         <Story />
