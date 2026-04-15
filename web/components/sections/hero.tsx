@@ -76,23 +76,23 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative hidden lg:block pb-4">
+          <div className="relative hidden lg:block pb-10">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/showmd-hero.jpg"
-                alt="ShowMD Mobile Medical Unit"
-                width={600}
-                height={420}
+                alt="ShowMD clinic at Desert International Horse Park"
+                width={1600}
+                height={1067}
                 className="w-full h-[420px] object-cover"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
-            <div className="absolute -bottom-2 left-4 bg-white/80 backdrop-blur-md rounded-xl shadow-md border border-white/60 p-4 flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+            <div className="absolute -bottom-2 left-4 right-4 bg-white/85 backdrop-blur-md rounded-xl shadow-lg border border-white/60 p-4 sm:p-5 flex items-start gap-4">
+              <div className="w-11 h-11 shrink-0 bg-primary/10 rounded-full flex items-center justify-center">
                 <svg
                   aria-hidden="true"
-                  className="lucide lucide-shield h-5 w-5 text-primary/80"
+                  className="h-5 w-5 text-primary/80"
                   fill="none"
                   height="24"
                   stroke="currentColor"
@@ -106,9 +106,22 @@ export default function Hero() {
                   <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
                 </svg>
               </div>
-              <div>
-                <p className="font-semibold text-slate-800 text-sm">Full Medical Clinic</p>
-                <p className="text-xs text-slate-500">X-Ray, Lab, Pharmacy On-Site</p>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-baseline justify-between gap-3 flex-wrap">
+                  <p className="font-semibold text-slate-800 text-sm sm:text-base">
+                    Full Medical Clinic
+                  </p>
+                  <p className="text-xs text-slate-500">
+                    Desert International Horse Park
+                  </p>
+                </div>
+                <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  X-Ray · Ultrasound · Labs · Pharmacy · IV Hydration · Minor
+                  Procedures
+                </p>
+                <p className="mt-1 text-[11px] sm:text-xs text-slate-500">
+                  Walk-ins welcome during show hours · Appointments via Solv
+                </p>
               </div>
             </div>
           </div>
