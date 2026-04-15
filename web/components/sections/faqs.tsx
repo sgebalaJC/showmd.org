@@ -123,7 +123,7 @@ function FaqItem({ faq }: { faq: Faq }) {
 
 export default function Faqs() {
   return (
-    <section className="py-20 md:py-28 bg-white" id="faqs">
+    <section className="py-20 md:py-28 bg-slate-50" id="faqs">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 max-w-6xl mx-auto">
           <div>

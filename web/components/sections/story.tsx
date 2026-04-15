@@ -27,7 +27,7 @@ const milestones = [
 
 export default function Story() {
   return (
-    <section className="py-20 md:py-28 bg-white" id="story">
+    <section className="py-20 md:py-28 bg-slate-50" id="story">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-sm font-semibold text-[hsl(40,76%,48%)] uppercase tracking-wider">
