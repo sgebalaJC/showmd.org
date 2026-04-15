@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button:not(:disabled),
+[role="button"]:not(:disabled) {
+  cursor: pointer;
+}
+
+.anchor {
+  scroll-margin-top: 96px;
+}
+
+.bg-radiance {
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, rgba(228, 183, 95, 0.22), transparent 60%),
+    radial-gradient(50rem 28rem at 5% 10%, rgba(212, 165, 76, 0.12), transparent 60%),
+    linear-gradient(180deg, #fdfcf7 0%, #f7f4ec 100%);
+}
+
+.bg-gridlines {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(28, 26, 21, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.glass {
+  background-color: rgba(253, 252, 247, 0.78);
+  backdrop-filter: saturate(150%) blur(12px);
+  -webkit-backdrop-filter: saturate(150%) blur(12px);
+}
