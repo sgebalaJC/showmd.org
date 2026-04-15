@@ -22,3 +22,8 @@ env:
     secret: RESEND_API_KEY
     availability:
       - RUNTIME
+  - variable: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+    value: AIzaSyAD1PP0JNs9iIXMO4640v-xtLHyG4VAvfA
+    availability:
+      - BUILD
+      - RUNTIME

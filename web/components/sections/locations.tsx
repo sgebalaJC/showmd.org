@@ -1,19 +1,39 @@
-import Image from "next/image";
+const MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+const MAPS_QUERY = encodeURIComponent(
+  "Blasko Medical Consultants, 12523 Limonite Ave, Eastvale, CA 91752",
+);
+const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${MAPS_QUERY}`;
 
 export default function Locations() {
+  const mapsEmbedUrl = MAPS_API_KEY
+    ? `https://www.google.com/maps/embed/v1/place?key=${MAPS_API_KEY}&q=${MAPS_QUERY}&zoom=15`
+    : null;
+
   return (
     <section className="py-20 md:py-28 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
-            <div className="rounded-2xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/showmd-equestrian.jpg"
-                alt="Equestrian competition"
-                width={600}
-                height={400}
-                className="w-full h-[400px] object-cover"
-              />
+            <div className="rounded-2xl overflow-hidden shadow-xl aspect-[3/2] bg-slate-100">
+              {mapsEmbedUrl ? (
+                <iframe
+                  title="Blasko Medical Consultants on Google Maps"
+                  src={mapsEmbedUrl}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                />
+              ) : (
+                <a
+                  href={MAPS_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-full w-full items-center justify-center text-sm text-slate-500 hover:text-slate-700"
+                >
+                  Open in Google Maps →
+                </a>
+              )}
             </div>
           </div>
 
@@ -91,6 +111,28 @@ export default function Locations() {
                 </p>
                 <p className="text-sm text-slate-600">Eastvale, CA 91752</p>
                 <p className="text-sm text-slate-500 mt-2">Fax: 262-394-0836</p>
+                <a
+                  href={MAPS_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-primary hover:text-primary/80"
+                >
+                  Get directions
+                  <svg
+                    aria-hidden="true"
+                    className="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
