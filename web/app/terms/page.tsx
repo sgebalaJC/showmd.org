@@ -74,7 +74,7 @@ export default function TermsPage() {
           <p>If any provision of these Terms is held unenforceable, the remaining provisions will remain in effect. These Terms, together with the Privacy Policy, constitute the entire agreement between you and ShowMD regarding the Site.</p>
 
           <h2>12. Contact</h2>
-          <p>Questions? Email <a href="mailto:hello@showmd.org">hello@showmd.org</a>.</p>
+          <p>Questions? Email <a href="mailto:barb@showmd.org">barb@showmd.org</a>.</p>
         </div>
 
         <div className="mt-12 border-t border-ink-100 pt-6 text-sm">
