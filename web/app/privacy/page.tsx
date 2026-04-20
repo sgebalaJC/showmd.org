@@ -155,9 +155,9 @@ export default function PrivacyPage() {
                 Email:{" "}
                 <a
                   className="text-primary hover:underline"
-                  href="mailto:kaitlyn@showmd.org"
+                  href="mailto:barb@showmd.org"
                 >
-                  kaitlyn@showmd.org
+                  barb@showmd.org
                 </a>
               </p>
             </div>

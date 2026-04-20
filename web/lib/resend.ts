@@ -9,7 +9,7 @@ export const MAIL_TO = (process.env.MAIL_TO || "barb@showmd.org")
   .split(",")
   .map((s) => s.trim())
   .filter(Boolean);
-export const MAIL_CC = (process.env.MAIL_CC || "kaitlyn@showmd.org")
+export const MAIL_CC = (process.env.MAIL_CC || "")
   .split(",")
   .map((s) => s.trim())
   .filter(Boolean);

@@ -76,8 +76,8 @@ web/
 
 | Form | Fields | Firestore collection | Email to | Subject |
 |---|---|---|---|---|
-| Contact | name, email, phone?, show?, message | `contact` | barb@showmd.org, cc kaitlyn@showmd.org, reply-to submitter | `ShowMD contact form: {name}` |
-| Subscribe | email | `subscribers` | barb@showmd.org, cc kaitlyn@showmd.org, reply-to submitter | `ShowMD newsletter signup: {email}` |
+| Contact | name, email, phone?, show?, message | `contact` | barb@showmd.org, reply-to submitter | `ShowMD contact form: {name}` |
+| Subscribe | email | `subscribers` | barb@showmd.org, reply-to submitter | `ShowMD newsletter signup: {email}` |
 
 Both have a `website` honeypot. Validation returns 400 with `{ error }`; success
 returns 201 `{ ok: true }`. Firestore write failures fail the request; Resend
