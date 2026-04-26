@@ -21,7 +21,7 @@ const services = [
         <circle cx="20" cy="10" r="2" />
       </svg>
     ),
-    title: "First Aid & Diagnostics",
+    title: "Acute Injury and Diagnostics",
     description:
       "Immediate care for injuries and illnesses with on-site diagnostic equipment and digital X-ray capabilities.",
   },

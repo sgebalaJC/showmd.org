@@ -4,6 +4,7 @@ import Hero from "@/components/sections/hero";
 import Video from "@/components/sections/video";
 import Services from "@/components/sections/services";
 import IVMenu from "@/components/sections/iv-menu";
+import HealthWellness from "@/components/sections/health-wellness";
 import About from "@/components/sections/about";
 import Story from "@/components/sections/story";
 import Invest from "@/components/sections/invest";
@@ -22,6 +23,7 @@ export default function Home() {
         <Video />
         <Services />
         <IVMenu />
+        <HealthWellness />
         <About />
         <Story />
         <Invest />

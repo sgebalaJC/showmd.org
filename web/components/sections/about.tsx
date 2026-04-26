@@ -46,30 +46,38 @@ export default function About() {
               A Doctor Who Speaks Equestrian
             </h2>
             <p className="text-sm font-medium text-slate-500 mb-6">
-              Dr. Barbara Blasko — Founder &amp; CEO
+              Meet the doctor who knows how important it is to get you back to
+              feeling ring-ready&mdash;because she&rsquo;s headed there too.
             </p>
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                Board-Certified Emergency Medicine Physician with 22 years of
-                experience across multiple Emergency Departments in the United
-                States. Specialties include Emergency Medicine, telemedicine,
-                Utilization Management, and biomedical informatics.
+                Dr. Barb Blasko is a board-certified Emergency Medicine
+                physician with over 20 years of experience practicing in
+                Emergency Departments across the United States. Her expertise
+                includes Emergency Medicine, Telemedicine, Utilization
+                Management, and Biomedical Informatics.
               </p>
               <p>
-                An amateur horsewoman and active show-jumping competitor on the
-                west-coast hunter/jumper circuits, Dr. Blasko combined her
-                passions to found ShowMD — staffing every clinic with medical
-                professionals who ride.
+                But Dr. Blasko isn&rsquo;t just a physician&mdash;she&rsquo;s a
+                fellow competitor. An amateur horsewoman and active
+                show-jumping competitor on the West Coast hunter/jumper
+                circuit, she splits her time between the emergency department
+                and the jumper ring with her mare, Dior.
               </p>
               <p>
-                At ShowMD, we prioritize a comfortable experience for our
-                patients, continuity of care, and medical staff specifically
-                trained to understand the needs, wants, and language of
-                equestrian athletes.
+                She founded ShowMD to combine those two worlds&mdash;creating a
+                medical service designed specifically for equestrian athletes,
+                staffed by providers who understand both medicine and riding.
+              </p>
+              <p>
+                At ShowMD, we prioritize patient comfort, continuity of care,
+                and a team trained to understand the unique needs, demands, and
+                language of the equestrian community.
               </p>
               <p className="font-medium text-slate-800">
-                When you tell a ShowMD staff member &ldquo;my horse did a two
-                in the one,&rdquo; they will know exactly what you mean.
+                When you tell anyone at ShowMD, &ldquo;my horse did a two in
+                the one,&rdquo; you won&rsquo;t need to explain&mdash;we
+                already understand.
               </p>
               <dl className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200">
                 <div>
