@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 const APPOINTMENT_URL =
@@ -41,15 +40,6 @@ const services: Service[] = [
       "Immediate care for injuries and illnesses with on-site diagnostic equipment and digital X-ray capabilities.",
     details: (
       <>
-        <div className="rounded-lg overflow-hidden border border-slate-200 bg-slate-50 mb-4">
-          <Image
-            src="/images/showmd-xray.jpg"
-            alt="On-site digital X-ray at the ShowMD clinic"
-            width={600}
-            height={400}
-            className="w-full h-48 object-cover"
-          />
-        </div>
         <ul className="list-disc pl-5 space-y-1">
           <li>Falls, sprains, fractures, and lacerations</li>
           <li>Digital X-ray on-site</li>
@@ -410,7 +400,9 @@ function ServiceCard({ service }: { service: Service }) {
       type="button"
       onClick={() => setOpen((v) => !v)}
       aria-expanded={open}
-      className="group bg-white border border-slate-100 rounded-xl p-6 hover:shadow-lg hover:border-primary/20 transition-all duration-300 cursor-pointer text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+      className={`group bg-white border border-slate-100 rounded-xl p-6 hover:shadow-lg hover:border-primary/20 transition-all duration-300 cursor-pointer text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40${
+        open ? " md:col-span-2" : ""
+      }`}
     >
       <div className="flex items-start justify-between gap-3 mb-4">
         <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
