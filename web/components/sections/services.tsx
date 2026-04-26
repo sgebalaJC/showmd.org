@@ -458,7 +458,7 @@ export default function Services() {
             for any of your #HorseShowHealthcare needs.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-6 items-start max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 items-start">
           {services.map((service) => (
             <ServiceCard key={service.title} service={service} />
           ))}
