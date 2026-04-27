@@ -349,9 +349,7 @@ const services: Service[] = [
             helps regulate appetite and metabolic function
           </li>
           <li>
-            <span className="font-semibold text-slate-800">
-              AOD 9604 (5 mg):
-            </span>{" "}
+            <span className="font-semibold text-slate-800">AOD 9604:</span>{" "}
             supports fat metabolism and may aid in targeted weight loss
           </li>
           <li>
@@ -359,9 +357,7 @@ const services: Service[] = [
             promotes skin health, hydration, and overall radiance from within
           </li>
           <li>
-            <span className="font-semibold text-slate-800">
-              NAD+ (500 mg):
-            </span>{" "}
+            <span className="font-semibold text-slate-800">NAD+:</span>{" "}
             supports cellular energy production, cognitive function, and
             anti-aging processes
           </li>
@@ -370,7 +366,7 @@ const services: Service[] = [
             supports skin rejuvenation, healing, and collagen production
           </li>
           <li>
-            <span className="font-semibold text-slate-800">Semax (30):</span>{" "}
+            <span className="font-semibold text-slate-800">Semax:</span>{" "}
             supports cognitive function, focus, and mental clarity
           </li>
           <li>
@@ -378,7 +374,9 @@ const services: Service[] = [
             supports metabolic function, energy regulation, and fat utilization
           </li>
           <li>
-            <span className="font-semibold text-slate-800">BPC/TB Blend:</span>{" "}
+            <span className="font-semibold text-slate-800">
+              BPC-157 / TB Blend:
+            </span>{" "}
             combines healing and anti-inflammatory benefits to support
             accelerated recovery
           </li>

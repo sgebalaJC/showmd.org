@@ -1,63 +1,64 @@
+const BASE_FLUID = "1 L Isotonic IV Fluid";
+
 const formulas = [
   {
     name: "Basic Hydration",
     tag: "Quick rehydration",
-    contents: "Balanced crystalloid for quick rehydration.",
+    contents: "",
   },
   {
     name: "Myers Cocktail",
     tag: "Overall wellness",
     contents:
-      "1 L fluid · Magnesium · B1, B2, B3, B5, B6, B12 · Calcium · Vitamin C",
+      "Magnesium · B1, B2, B3, B5, B6, B12 · Calcium · Vitamin C",
   },
   {
     name: "Quench",
     tag: "Hydrate + combat fatigue",
     contents:
-      "1 L fluid · Vit C · B1, B2, B3, B5, B6 · Magnesium · Zinc · Manganese · Copper · Selenium",
+      "Vit C · B1, B2, B3, B5, B6 · Magnesium · Zinc · Manganese · Copper · Selenium",
   },
   {
     name: "Get Up & Go",
     tag: "Energy + metabolism",
     contents:
-      "1 L fluid · B1, B2, B3, B5, B6 · Glutamine · Arginine · Ornithine · Lysine · Citrulline · Carnitine",
+      "B1, B2, B3, B5, B6 · Glutamine · Arginine · Ornithine · Lysine · Citrulline · Carnitine",
   },
   {
     name: "Inner Beauty",
     tag: "Skin + anti-aging",
     contents:
-      "1 L fluid · Vit C · B1, B2, B3, B5, B6 · Biotin",
+      "Vit C · B1, B2, B3, B5, B6 · Biotin",
   },
   {
     name: "Reboot",
     tag: "Hangover / headache / nausea",
     contents:
-      "1 L fluid · Zofran · B1, B2, B3, B5, B6 · Magnesium · Zinc · Manganese · Copper · Selenium · Toradol",
+      "Zofran · B1, B2, B3, B5, B6 · Magnesium · Zinc · Manganese · Copper · Selenium · Toradol",
   },
   {
     name: "Immunity",
     tag: "Feel better faster",
     contents:
-      "1 L fluid · Vit C Booster · Multivitamin Complex · Zinc",
+      "Vit C Booster · Multivitamin Complex · Zinc",
   },
   {
     name: "Recovery & Performance",
     tag: "Decrease recovery time",
     contents:
-      "1 L fluid · Vit C · Multivitamin Complex · Amino acid blend · Mineral blend",
-  },
-  {
-    name: "Vita-Fuse",
-    tag: "Full-spectrum vitamin boost",
-    contents:
-      "Vit C · Vit A · Vit D3 · Vit E · Vit K · Thiamine (B1) · Riboflavin (B2) · B6 · Folic Acid · Biotin · B12",
+      "Vit C · Multivitamin Complex · Amino acid blend · Mineral blend",
   },
 ];
 
 const injections = [
-  { name: "B12", tag: "IM injection" },
-  { name: "Glutathione", tag: "IM injection" },
-  { name: "Fluid + Glutathione", tag: "IV add-on" },
+  "B Complex",
+  "B12",
+  "Biotin",
+  "Glutathione",
+  "Magnesium",
+  "NAD",
+  "Tri-Immune Boost",
+  "Vitamin C",
 ];
 
 export default function IVMenu() {
@@ -90,9 +91,14 @@ export default function IVMenu() {
                   {f.tag}
                 </span>
               </div>
-              <p className="mt-2 text-xs text-slate-600 leading-relaxed">
-                {f.contents}
+              <p className="mt-2 text-sm font-bold text-slate-900">
+                {BASE_FLUID}
               </p>
+              {f.contents && (
+                <p className="mt-1 text-xs text-slate-600 leading-relaxed">
+                  {f.contents}
+                </p>
+              )}
             </div>
           ))}
         </div>
@@ -103,13 +109,12 @@ export default function IVMenu() {
               IM / IV Add-ons
             </h3>
             <div className="flex flex-wrap gap-2">
-              {injections.map((i) => (
+              {injections.map((name) => (
                 <span
-                  key={i.name}
-                  className="inline-flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full px-3 py-1 text-xs"
+                  key={name}
+                  className="inline-flex items-center bg-slate-50 border border-slate-200 rounded-full px-3 py-1 text-xs font-semibold text-slate-800"
                 >
-                  <span className="font-semibold text-slate-800">{i.name}</span>
-                  <span className="text-slate-500">· {i.tag}</span>
+                  {name}
                 </span>
               ))}
             </div>
