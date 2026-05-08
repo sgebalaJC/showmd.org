@@ -117,7 +117,7 @@ export default function Locations() {
                   12523 Limonite Ave, Ste #440 #144
                 </p>
                 <p className="text-sm text-slate-600">Eastvale, CA 91752</p>
-                <p className="text-sm text-slate-500 mt-2">Fax: (262) 394-0836</p>
+                <p className="text-sm text-slate-500 mt-2">Fax: 262-394-0836</p>
                 <a
                   href={MAPS_LINK}
                   target="_blank"
