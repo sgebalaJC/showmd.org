@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 const MAPS_QUERY = encodeURIComponent(
   "Blasko Medical Consultants, 12523 Limonite Ave, Eastvale, CA 91752",
@@ -79,6 +81,26 @@ export default function Locations() {
                   <p className="text-xs text-slate-500">
                     Walk-ins welcome · Appointments via Solv
                   </p>
+                  <Link
+                    href="/dihp-clinic"
+                    className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-primary hover:text-primary/80"
+                  >
+                    Visit the DIHP clinic page
+                    <svg
+                      aria-hidden="true"
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
 

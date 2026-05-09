@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const APPOINTMENT_URL =
   "https://www.solvhealth.com/r/book-online/pjOB6G/z932VQKdg6inEA26IqgU0/slots/today";
@@ -35,12 +36,12 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-[1.1] mb-6">
               Horse Show
               <br />
-              <span className="text-[hsl(40,76%,60%)]">Health Care</span>
+              <span className="text-[hsl(40,76%,60%)]">Urgent Care</span>
             </h1>
             <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-xl">
-              Onsite Urgent Care and Concierge Medical Service for the equestrian
-              community. The same equipment and technology found in any clinic —
-              right at the horse show.
+              Onsite urgent care and concierge medical service for the
+              equestrian community. The same equipment and technology found in
+              any clinic — right at the horse show.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -88,7 +89,10 @@ export default function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
-            <div className="absolute -bottom-2 left-4 right-4 bg-white/85 backdrop-blur-md rounded-xl shadow-lg border border-white/60 p-4 sm:p-5 flex items-start gap-4">
+            <Link
+              href="/dihp-clinic"
+              className="absolute -bottom-2 left-4 right-4 bg-white/85 backdrop-blur-md rounded-xl shadow-lg border border-white/60 p-4 sm:p-5 flex items-start gap-4 hover:bg-white transition-colors group"
+            >
               <div className="w-11 h-11 shrink-0 bg-primary/10 rounded-full flex items-center justify-center">
                 <svg
                   aria-hidden="true"
@@ -111,8 +115,21 @@ export default function Hero() {
                   <p className="font-semibold text-slate-800 text-sm sm:text-base">
                     Full Medical Clinic
                   </p>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-slate-500 group-hover:text-primary transition-colors inline-flex items-center gap-1">
                     Desert International Horse Park
+                    <svg
+                      aria-hidden="true"
+                      className="h-3 w-3 opacity-0 -ml-1 group-hover:opacity-100 group-hover:ml-0 transition-all"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
                   </p>
                 </div>
                 <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -123,7 +140,7 @@ export default function Hero() {
                   Walk-ins welcome during show hours · Appointments via Solv
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

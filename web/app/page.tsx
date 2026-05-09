@@ -1,5 +1,7 @@
 import Nav from "@/components/site/nav";
 import Footer from "@/components/site/footer";
+import JsonLd from "@/components/seo/json-ld";
+import { dihpClinicSchema, faqPageSchema } from "@/lib/structured-data";
 import Hero from "@/components/sections/hero";
 import Video from "@/components/sections/video";
 import Services from "@/components/sections/services";
@@ -17,6 +19,8 @@ import Contact from "@/components/sections/contact";
 export default function Home() {
   return (
     <>
+      <JsonLd id="ld-dihp-clinic" data={dihpClinicSchema} />
+      <JsonLd id="ld-faqs" data={faqPageSchema} />
       <Nav />
       <main>
         <Hero />
