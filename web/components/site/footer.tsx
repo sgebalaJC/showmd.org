@@ -7,18 +7,21 @@ export default function Footer() {
     <footer className="bg-[hsl(0,45%,14%)] py-12 border-t border-[hsl(0,30%,20%)]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center gap-6 text-center">
-          <Image
-            src="/images/showmd-logo.png"
-            alt="ShowMD"
-            width={160}
-            height={46}
-            className="h-10 w-auto object-contain brightness-0 invert"
-          />
+          <div className="flex items-baseline gap-1">
+            <Image
+              src="/images/showmd-logo.png"
+              alt="ShowMD"
+              width={160}
+              height={46}
+              className="h-10 w-auto object-contain brightness-0 invert"
+            />
+            <span className="text-white text-sm font-medium leading-none">™</span>
+          </div>
           <p className="text-white/50 text-sm font-medium">
             Horse Show Health Care — Onsite Urgent Care &amp; Concierge Medical
           </p>
           <div className="w-full flex flex-col items-center gap-3 pt-2">
-            <p className="text-white/60 text-sm">Stay in the loop — get updates from ShowMD.</p>
+            <p className="text-white/60 text-sm">Stay in the loop — get updates from ShowMD&trade;.</p>
             <SubscriptionForm />
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-2 text-white/40 text-sm pt-4 border-t border-white/10 w-full max-w-xl justify-center">
