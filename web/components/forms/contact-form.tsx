@@ -14,7 +14,8 @@ export default function ContactForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (submitting) return;
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const payload = {
       name: String(fd.get("name") || "").trim(),
       email: String(fd.get("email") || "").trim(),
@@ -34,8 +35,8 @@ export default function ContactForm() {
         const data = (await res.json().catch(() => ({}))) as { error?: string };
         throw new Error(data.error || `Request failed (${res.status})`);
       }
+      form.reset();
       setStatus({ kind: "ok" });
-      e.currentTarget.reset();
     } catch (err) {
       const msg =
         err instanceof Error

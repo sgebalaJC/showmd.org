@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { FieldValue } from "firebase-admin/firestore";
 import { db } from "@/lib/firebase-admin";
-import { resend, escapeHtml, MAIL_FROM, MAIL_TO, MAIL_CC } from "@/lib/resend";
+import { sendMail, isMailConfigured, escapeHtml, MAIL_TO, MAIL_CC } from "@/lib/mail";
 
 export const runtime = "nodejs";
 
@@ -71,7 +71,7 @@ export async function POST(req: Request) {
     );
   }
 
-  if (resend) {
+  if (isMailConfigured) {
     const subject = `ShowMD contact form: ${name}`;
     const html = `
       <div style="font-family:Inter,Arial,sans-serif;color:#0f172a;line-height:1.5">
@@ -99,8 +99,7 @@ export async function POST(req: Request) {
       .join("\n");
 
     try {
-      await resend.emails.send({
-        from: MAIL_FROM,
+      await sendMail({
         to: MAIL_TO,
         cc: MAIL_CC,
         replyTo: email,
@@ -112,7 +111,7 @@ export async function POST(req: Request) {
       console.error("contact: email send failed", err);
     }
   } else {
-    console.warn("contact: RESEND_API_KEY not set — email not sent");
+    console.warn("contact: GOOGLE_SA_KEY not set — email not sent");
   }
 
   return NextResponse.json({ ok: true }, { status: 201 });

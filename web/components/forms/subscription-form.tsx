@@ -47,39 +47,41 @@ export default function SubscriptionForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="flex flex-col sm:flex-row gap-2 w-full max-w-md"
+      className="flex flex-col gap-2 w-full max-w-md"
       noValidate
     >
-      <label className="flex-1">
-        <span className="sr-only">Email address</span>
+      <div className="flex flex-col sm:flex-row gap-2">
+        <label className="flex-1">
+          <span className="sr-only">Email address</span>
+          <input
+            required
+            type="email"
+            name="email"
+            autoComplete="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="you@example.com"
+            className="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/40 focus:border-[hsl(40,76%,60%)] focus:outline-none focus:ring-2 focus:ring-[hsl(40,76%,60%)]/40"
+          />
+        </label>
         <input
-          required
-          type="email"
-          name="email"
-          autoComplete="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@example.com"
-          className="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/40 focus:border-[hsl(40,76%,60%)] focus:outline-none focus:ring-2 focus:ring-[hsl(40,76%,60%)]/40"
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+          aria-hidden="true"
         />
-      </label>
-      <input
-        type="text"
-        name="website"
-        tabIndex={-1}
-        autoComplete="off"
-        className="hidden"
-        aria-hidden="true"
-      />
-      <button
-        type="submit"
-        disabled={submitting}
-        className="inline-flex items-center justify-center rounded-md bg-[hsl(40,76%,48%)] hover:bg-[hsl(40,76%,42%)] disabled:opacity-60 px-4 py-2 text-sm font-semibold text-white transition-colors"
-      >
-        {submitting ? "Joining…" : "Subscribe"}
-      </button>
+        <button
+          type="submit"
+          disabled={submitting}
+          className="inline-flex items-center justify-center rounded-md bg-[hsl(40,76%,48%)] hover:bg-[hsl(40,76%,42%)] disabled:opacity-60 px-4 py-2 text-sm font-semibold text-white transition-colors"
+        >
+          {submitting ? "Joining…" : "Subscribe"}
+        </button>
+      </div>
       {status.kind === "err" && (
-        <p className="text-xs text-[hsl(40,76%,72%)] sm:w-full">{status.msg}</p>
+        <p className="text-xs text-[hsl(40,76%,72%)]">{status.msg}</p>
       )}
     </form>
   );

@@ -7,15 +7,19 @@ runConfig:
 
 env:
   - variable: MAIL_FROM
-    value: ShowMD <notifications@showmd.org>
+    value: ShowMD Forms <barb@showmd.org>
     availability:
       - RUNTIME
   - variable: MAIL_TO
     value: barb@showmd.org
     availability:
       - RUNTIME
-  - variable: RESEND_API_KEY
-    secret: RESEND_API_KEY
+  - variable: MAIL_SEND_AS
+    value: barb@showmd.org
+    availability:
+      - RUNTIME
+  - variable: GOOGLE_SA_KEY
+    secret: GOOGLE_SA_KEY
     availability:
       - RUNTIME
   - variable: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
