@@ -72,6 +72,27 @@ web/
   (the API key currently in use was shared in a Claude Code transcript — rotate
   before public launch).
 
+## Peptides gate
+
+Patient-only `/peptides` page (reconstitution video). Gated by a shared access
+code:
+
+- `PEPTIDES_PASSWORD` env (Secret Manager in prod, `web/.env.local` in dev).
+- POST `/api/peptides/auth` validates the submitted code and sets an HttpOnly
+  `peptides_access` cookie (value = `sha256(PEPTIDES_PASSWORD)`, 30-day maxAge,
+  `Secure` in prod, `SameSite=Lax`).
+- `web/app/peptides/page.tsx` is `force-dynamic`, calls `hasPeptidesAccess()`
+  (`web/lib/peptides-auth.ts`) and renders either the password form
+  (`web/components/peptides/password-form.tsx`) or the gated content.
+- Page is `robots: noindex,nofollow` and intentionally not in the sitemap.
+- Rotating the password auto-invalidates every existing cookie (the SHA changes).
+  Rotate with `firebase apphosting:secrets:set PEPTIDES_PASSWORD`.
+- Homepage entry point: `components/sections/peptides.tsx` (after `<Services />`).
+
+This is a **soft gate** — protects the page, not the YouTube embed URL itself.
+If a stronger video gate is needed later, swap the YouTube embed for Vimeo
+(private + domain restriction) or signed Mux URLs.
+
 ## Forms
 
 | Form | Fields | Firestore collection | Email to | Subject |

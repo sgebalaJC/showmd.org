@@ -5,6 +5,7 @@ import { dihpClinicSchema, faqPageSchema } from "@/lib/structured-data";
 import Hero from "@/components/sections/hero";
 import Video from "@/components/sections/video";
 import Services from "@/components/sections/services";
+import Peptides from "@/components/sections/peptides";
 import IVMenu from "@/components/sections/iv-menu";
 import HealthWellness from "@/components/sections/health-wellness";
 import About from "@/components/sections/about";
@@ -26,6 +27,7 @@ export default function Home() {
         <Hero />
         <Video />
         <Services />
+        <Peptides />
         <IVMenu />
         <HealthWellness />
         <About />
