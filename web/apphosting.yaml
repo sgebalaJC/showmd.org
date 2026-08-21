@@ -14,6 +14,10 @@ env:
     value: barb@showmd.org
     availability:
       - RUNTIME
+  - variable: CONTACT_MAIL_TO
+    value: kaitlyn@showmd.org
+    availability:
+      - RUNTIME
   - variable: MAIL_SEND_AS
     value: barb@showmd.org
     availability:

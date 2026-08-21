@@ -30,7 +30,7 @@ Sibling marketing site (reference only): `/Users/stan/Projects/aureliamd.com`
 web/
   app/
     api/
-      contact/route.ts      POST — writes contact/; sends email to MAIL_TO cc MAIL_CC
+      contact/route.ts      POST — writes contact/; sends email to CONTACT_MAIL_TO cc MAIL_CC
       subscribe/route.ts    POST — writes subscribers/; sends notification to MAIL_TO cc MAIL_CC
     layout.tsx              Root layout + metadata + Inter/Playfair fonts
     page.tsx                Home — imports 10 sections + Nav + Footer
@@ -62,9 +62,9 @@ web/
 ## Environment
 
 - `web/.env.local` (gitignored) — dev values: `RESEND_API_KEY`, `MAIL_FROM`,
-  `MAIL_TO`, `MAIL_CC`.
+  `MAIL_TO`, `CONTACT_MAIL_TO`, `MAIL_CC`.
 - `web/.env.example` — template.
-- **Production**: `apphosting.yaml` declares `MAIL_FROM/TO/CC` as plain env and
+- **Production**: `apphosting.yaml` declares `MAIL_FROM/TO/CONTACT_MAIL_TO/CC` as plain env and
   `RESEND_API_KEY` as a Secret Manager reference. The secret is stored in
   `projects/showmd-org/secrets/RESEND_API_KEY` and granted to the backend
   service account.
@@ -97,7 +97,7 @@ If a stronger video gate is needed later, swap the YouTube embed for Vimeo
 
 | Form | Fields | Firestore collection | Email to | Subject |
 |---|---|---|---|---|
-| Contact | name, email, phone?, show?, message | `contact` | barb@showmd.org, reply-to submitter | `ShowMD contact form: {name}` |
+| Contact | name, email, phone?, show?, message | `contact` | kaitlyn@showmd.org, reply-to submitter | `ShowMD contact form: {name}` |
 | Subscribe | email | `subscribers` | barb@showmd.org, reply-to submitter | `ShowMD newsletter signup: {email}` |
 
 Both have a `website` honeypot. Validation returns 400 with `{ error }`; success

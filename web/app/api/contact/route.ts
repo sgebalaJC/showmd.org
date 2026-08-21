@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { FieldValue } from "firebase-admin/firestore";
 import { db } from "@/lib/firebase-admin";
-import { sendMail, isMailConfigured, escapeHtml, MAIL_TO, MAIL_CC } from "@/lib/mail";
+import { sendMail, isMailConfigured, escapeHtml, CONTACT_MAIL_TO, MAIL_CC } from "@/lib/mail";
 
 export const runtime = "nodejs";
 
@@ -100,7 +100,7 @@ export async function POST(req: Request) {
 
     try {
       await sendMail({
-        to: MAIL_TO,
+        to: CONTACT_MAIL_TO,
         cc: MAIL_CC,
         replyTo: email,
         subject,
