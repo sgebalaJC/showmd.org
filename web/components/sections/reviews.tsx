@@ -37,6 +37,20 @@ const reviews = [
   },
   {
     quote:
+      "\u201CHad a bruised hamstring, could barely walk. Had a pain shot, was able to ride and won my competition!\u201D",
+    name: "ShowMD Patient",
+    role: "Equestrian Competitor",
+    wide: false,
+  },
+  {
+    quote:
+      "\u201CDr. Barb took me right away. I had an IV and feel a million times better. Thank goodness ShowMD was here for me today.\u201D",
+    name: "ShowMD Patient",
+    role: "Walk-In Patient",
+    wide: false,
+  },
+  {
+    quote:
       "\u201CDog bite\u2026staff was efficient, caring and very personable. Dr Barb was great with my many stitches!\u201D",
     name: "ShowMD Patient",
     role: "Desert International Horse Park",
